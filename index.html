@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload PDF</title>
+    </head>
+    <body>
+        <h1>Upload a PDF File</h1>
+        <form method="post" id="upload" enctype="multipart/form-data">
+            <input type="text" name="subject" placeholder="Please Enter Subject"><br><br>
+            <input type="text" name="number" placeholder="How Many Questions"><br><br>
+            <input type="radio" id="Easy" name="Difficulty" value="Easy">
+            <label for="Easy">Easy</label><br>
+            <input type="radio" id="Intermediate" name="Difficulty" value="Imtermediate">
+            <label for="Intermediate">Intermediate</label><br>
+            <input type="radio" id="Hard" name="Difficulty" value="Hard">
+            <label for="other">Hard</label><br><br>
+            <input type="file" name="pdf" accept=".pdf"><br><br>
+            <input type="submit" value="Upload">
+        </form>
+
+        <h2>Generated Questions:</h2>
+        <ul>
+            <h3>{{ questions }}</h3>
+        </ul>
+        </form>
+    </body>
+    </html>
